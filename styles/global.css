@@ -1,0 +1,46 @@
+/* src/styles/global.css */
+
+/* 1. Importar las fuentes desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@400;700&display=swap');
+
+/* 2. Definir variables de color y tipografía inspiradas en el logo */
+:root {
+  /* Paleta de Colores */
+  --color-dark-bg: #111111; /* Un negro casi puro, muy elegante */
+  --color-light-bg: #1a1a1a; /* Un gris oscuro para fondos secundarios */
+  --color-text-light: #f0f0f0;
+  --color-text-muted: #a0a0a0;
+  
+  /* Colores de Acento del Logo */
+  --color-accent-cyan: #00aeef;
+  --color-accent-magenta: #ec008c;
+  --color-accent-yellow: #fff200;
+
+  /* Tipografía */
+  --font-display: 'Oswald', sans-serif; /* Para títulos */
+  --font-body: 'Roboto', sans-serif;    /* Para párrafos */
+}
+
+/* 3. Estilos base y reseteo */
+html {
+  font-family: var(--font-body);
+  color: var(--color-text-light);
+  background-color: var(--color-dark-bg);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+/* 4. Estilos base para los títulos */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  margin: 0;
+  text-transform: uppercase; /* Títulos en mayúscula, como en el logo */
+}
+
+/* 5. Clases de utilidad que usaremos */
+.accent-text-cyan { color: var(--color-accent-cyan); }
+.accent-text-magenta { color: var(--color-accent-magenta); }
+.accent-text-yellow { color: var(--color-accent-yellow); }
