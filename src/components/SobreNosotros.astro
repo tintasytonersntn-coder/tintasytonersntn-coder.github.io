@@ -1,0 +1,114 @@
+---
+// src/components/SobreNosotros.astro
+---
+<section id="nosotros">
+    <div class="container">
+        <div class="intro-text">
+            <h2>Pioneros y Especialistas en Impresión</h2>
+            <p>
+                Somos especialistas en el reciclado y recarga de cartuchos para impresoras. Con un trabajo transparente y garantizado, brindamos a nuestros clientes soluciones integrales: desde la venta de insumos originales y alternativos hasta la provisión de periféricos, accesorios y papeles especiales.
+            </p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="icon-wrapper">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"></path></svg>
+                </div>
+                <h3>Recargas de Cartuchos</h3>
+                <p>Calidad, seguridad y tecnología. Nos destacamos por nuestra tecnología automatizada y un riguroso control de calidad tanto en Toner Láser como en Ink-Jet.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon-wrapper">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                </div>
+                <h3>Venta de Insumos</h3>
+                <p>Contamos con la más amplia línea de cartuchos originales, alternativos y reciclados. Stock permanente para que nunca te quedes sin imprimir.</p>
+            </div>
+
+            <div class="service-card">
+                 <div class="icon-wrapper">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9.5l-4 4-4-4"></path><path d="M20 9.5l-4 4-4-4"></path><path d="M17 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"></path></svg>
+                </div>
+                <h3>Reparación de Impresoras</h3>
+                <p>Nuestros técnicos calificados están listos para dar solución a cualquier problema, sin importar la marca, modelo o antigüedad de tu impresora.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="icon-wrapper">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                </div>
+                <h3>Periféricos y Papelería</h3>
+                <p>Todo lo que necesitas para tu oficina: impresoras, accesorios de computación y una gran variedad de papeles fotográficos, mate y más.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+#nosotros {
+    padding: 4rem 2rem;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+.intro-text {
+    max-width: 800px;
+    margin: 0 auto 4rem auto; /* Centra y añade espacio abajo */
+}
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+.intro-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-text-muted);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    text-align: left;
+}
+.service-card {
+    background-color: var(--color-light-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent-magenta);
+}
+.service-card .icon-wrapper {
+    background-color: var(--color-dark-bg);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+.service-card svg {
+    width: 32px;
+    height: 32px;
+    stroke: var(--color-accent-cyan);
+}
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-text-light);
+}
+.service-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+}
+</style>

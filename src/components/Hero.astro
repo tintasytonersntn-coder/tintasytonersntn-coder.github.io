@@ -1,0 +1,138 @@
+---
+// src/components/Hero.astro
+const productImage = "/img/ntnpuerta2.webp"; // Imagen principal a mostrar
+---
+<section class="hero-section">
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1 class="hero-title">NTN Tintas y Toners</h1>
+            <p class="hero-subtitle">Calidad, confianza y el mejor soporte técnico en Río Cuarto. Recargas, insumos y reparaciones, todo en un solo lugar.</p>
+            
+            <div class="hero-actions">
+                <a href="/#nosotros" class="cta-button magenta">
+                    Sobre Nosotros
+                </a>
+                <a href="/#productos" class="cta-button yellow">
+                    Productos
+                </a>
+                <a href="/#contacto" class="cta-button cyan">
+                    Contacto
+                </a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src={productImage} alt="Impresora y toners de NTN" />
+        </div>
+    </div>
+</section>
+
+<style>
+  .hero-section {
+    padding: 4rem 2rem;
+    background-color: var(--color-dark-bg);
+    display: flex;
+    align-items: center;
+    min-height: 80vh;
+  }
+
+  .hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .hero-content {
+    text-align: left;
+  }
+
+  .hero-title {
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: white;
+    background: linear-gradient(90deg, var(--color-accent-cyan), var(--color-accent-magenta));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 500px;
+  }
+
+  /* --- ESTILOS PARA LOS 3 BOTONES --- */
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 1rem;
+  }
+
+  .cta-button {
+    padding: 0.8rem 1.75rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    border: none;
+    color: var(--color-dark-bg); /* Todos los botones tendrán texto oscuro */
+  }
+  .cta-button:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1); /* Un leve brillo al pasar el mouse */
+  }
+
+  /* Clases de color para cada botón */
+  .cta-button.cyan {
+    background-color: var(--color-accent-cyan);
+  }
+  .cta-button.magenta {
+    background-color: var(--color-accent-magenta);
+  }
+  .cta-button.yellow {
+    background-color: var(--color-accent-yellow);
+  }
+  
+  /* --- (El resto de los estilos permanecen igual) --- */
+  .hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+  }
+
+  @media (max-width: 768px) {
+    .hero-container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .hero-content {
+      order: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero-image {
+      order: 1; 
+    }
+    .hero-subtitle {
+      max-width: 100%;
+    }
+    .hero-actions {
+        justify-content: center;
+    }
+  }
+</style>

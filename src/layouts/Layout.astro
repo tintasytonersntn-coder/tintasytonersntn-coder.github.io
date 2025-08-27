@@ -1,0 +1,27 @@
+---
+// src/layouts/Layout.astro
+import '../styles/global.css';
+import Header from '../components/Header.astro'; // <-- 1. IMPORTA EL HEADER
+
+export interface Props {
+    title: string;
+    description: string;
+}
+
+const { title, description } = Astro.props;
+---
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <title>{title} | NTN Tintas y Toners</title>
+    </head>
+    <body>
+        <Header /> <main>
+            <slot />
+        </main>
+        </body>
+</html>

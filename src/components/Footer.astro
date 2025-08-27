@@ -1,0 +1,77 @@
+---
+// src/components/Footer.astro
+const currentYear = new Date().getFullYear();
+// Reemplaza con los links reales del negocio
+const facebookUrl = "#"; 
+const instagramUrl = "#";
+const tiktokUrl = "#";
+---
+<footer class="site-footer scroll-section">
+    <div class="footer-container">
+        <div class="footer-info">
+            <p class="copyright">&copy; {currentYear} NTN Tintas y Toners. Todos los derechos reservados.</p>
+            <p class="made-with">Diseñado y desarrollado por [Tu Nombre]</p>
+        </div>
+        <div class="social-links">
+            <a href={facebookUrl} target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a>
+            <a href={instagramUrl} target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+            <a href={tiktokUrl} target="_blank" rel="noopener noreferrer" aria-label="TikTok">TikTok</a>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .site-footer {
+        padding: 2rem;
+        background-color: var(--black);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .copyright p {
+        margin: 0;
+        font-size: 0.9rem;
+        color: var(--text-muted);
+    }
+    
+    .made-with {
+        font-size: 0.8rem;
+        opacity: 0.6;
+        margin-top: 0.25rem;
+    }
+
+    .social-links {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .social-links a {
+        color: var(--text-muted);
+        text-decoration: none;
+        font-weight: 700;
+        transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+        color: var(--cyan);
+    }
+
+    @media (max-width: 768px) {
+        .footer-container {
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .copyright, .social-links {
+            text-align: center;
+        }
+    }
+</style>
